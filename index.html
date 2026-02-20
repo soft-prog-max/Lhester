@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Persons Information</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+
+<div id="loginPage" class="login-page">
+  <div class="login-box">
+    <h2>Web System 1</h2>
+    <input type="text" id="username" placeholder="Username">
+    <input type="password" id="password" placeholder="Password">
+    <button onclick="login()">Login</button>
+    <p id="loginMessage"></p>
+  </div>
+</div>
+
+
+<div id="dashboardPage" class="dashboard" style="display:none;">
+
+  
+  <div class="header">Persons Information</div>
+
+  <div class="main">
+    
+    <div class="sidebar">
+      <div onclick="showSection('persons')">🏠 Home</div>
+      <div onclick="showSection('persons')">👥 Persons</div>
+      <div onclick="showSection('about')">ℹ️ About</div>
+      <div onclick="logout()">🚪 Logout</div>
+    </div>
+
+    
+    <div class="content">
+
+      
+      <div id="personsSection">
+        <div class="form-table">
+
+          <div class="form">
+            <h3>Please Enter Information</h3>
+            <input id="fname" placeholder="First Name">
+            <input id="mname" placeholder="Middle Name">
+            <input id="lname" placeholder="Last Name">
+            <input id="age" type="number" placeholder="Age">
+            <input id="email" type="email" placeholder="Email">
+            <button onclick="savePerson()">💾 Save</button>
+          </div>
+
+          <div class="table">
+            <h3>Saved Persons Data</h3>
+            <table>
+              <thead>
+                <tr>
+                  <th>First</th>
+                  <th>Middle</th>
+                  <th>Last</th>
+                  <th>Age</th>
+                  <th>Email</th>
+                </tr>
+              </thead>
+              <tbody id="tableBody"></tbody>
+            </table>
+          </div>
+
+        </div>
+      </div>
+
+      
+      <div id="aboutSection" style="display:none;">
+        <h3>About Me</h3>
+        <p>
+          Hello! I am Al Jhune Leturco, I'm 21 years old and I'm IT student in SOFT INFORMATION TECHNOLOGY 
+        </p>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
